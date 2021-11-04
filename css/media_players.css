@@ -1,3 +1,4 @@
+
 .tabs{
     width:80%;
     height:auto;
@@ -73,3 +74,87 @@
         width:80px;
     }
 }
+div#mybutton {
+    overflow: hidden;
+    position: relative;  
+        width:  100px;
+        height: 28px; 
+}
+
+input#uploadVideo {
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+
+    opacity: 0.0; /* Standard: FF gt 1.5, Opera, Safari */
+    filter: alpha(opacity=0); /* IE lt 8 */
+    -ms-filter: "alpha(opacity=0)"; /* IE 8 */
+    -khtml-opacity: 0.0; /* Safari 1.x */
+    -moz-opacity: 0.0; /* FF lt 1.5, Netscape */
+}
+.btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(255,255,255,0.8) url("../images/spinner.gif") center no-repeat;
+}
+/* Turn off scrollbar when body element has the loading class */
+body.loading{
+    overflow: hidden;   
+}
+/* Make spinner image visible when body element has the loading class */
+body.loading .overlay{
+    display: block;
+}
+.hide {
+    display: none; 
+}
+
+.modal {
+    z-index: -1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-open .modal {
+     z-index: 1050;
+  }
+
+  .ui-dialog {
+      margin: 15px;
+  }
